@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#17142b" />
+  <meta name="description" content="Quirk and Byte star in The Big Idea, a playable 3D cartoon made with Three.js." />
+  <title>QuirkToon — The Big Idea</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <main class="stage" aria-label="QuirkToon cartoon player">
+    <canvas id="scene" aria-label="Animated scene with Quirk and Byte"></canvas>
+    <div class="brand"><span class="brand-mark">Q</span><span>QUIRK<span class="brand-light">TOON</span></span></div>
+    <div class="episode"><span class="episode-dot"></span> EPISODE 01 <b>·</b> THE BIG IDEA</div>
+    <div class="caption" id="caption" aria-live="polite">A big idea is loading…</div>
+    <div class="controls">
+      <button id="replay" type="button" aria-label="Replay animation"><span aria-hidden="true">↻</span><span class="button-label">REPLAY</span></button>
+      <button id="playPause" type="button" aria-label="Pause animation"><span id="playIcon" aria-hidden="true">Ⅱ</span><span class="button-label" id="playLabel">PAUSE</span></button>
+    </div>
+    <div class="timeline" aria-hidden="true"><div id="progress"></div></div>
+    <div class="credit">A LITTLE CHAOS. A LOT OF LOGIC.</div>
+    <div id="error" class="error" role="alert" hidden></div>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
